@@ -8,9 +8,9 @@ def main(page: ft.Page):
         # get draggable (source) control by its ID
         src = page.get_control(e.src_id)
         # update text inside draggable control
-        src.content.content.value = "0"
+        src.content.content.value = "0"  # type: ignore
         # reset source group, so it cannot be dropped to a target anymore
-        src.group = ""
+        src.group = ""  # type: ignore
         # update text inside drag target control
         e.control.content.content.value = "1"
         # reset border
